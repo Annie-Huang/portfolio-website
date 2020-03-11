@@ -6,3 +6,8 @@ ttps://github.com/Annie-Huang/portfolio-website
 https://cdnjs.com/libraries/font-awesome/5.12.1
 https://cdnjs.com/libraries/normalize
 ========================================================
+
+C:\react\portfolio-website>npm init -y
+C:\react\portfolio-website>npm install --save-dev lite-server
+C:\react\portfolio-website>npm run start
+
