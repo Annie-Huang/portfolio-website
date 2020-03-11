@@ -5,9 +5,27 @@ ttps://github.com/Annie-Huang/portfolio-website
 
 https://cdnjs.com/libraries/font-awesome/5.12.1
 https://cdnjs.com/libraries/normalize
-========================================================
+
+http://dribbble.com     << actually never heard of this website before.
+=====================================================================================
 
 C:\react\portfolio-website>npm init -y
 C:\react\portfolio-website>npm install --save-dev lite-server
 C:\react\portfolio-website>npm run start
 
+        <nav class="nav">
+            <ul class="nav__list"></ul>
+the __ means list is a sub-component of nav in class="nav", BEM standard.
+
+
+<h1 class="section__title section__title--intro"></h1>
+the --intro means it is the modifier of section__title
+
+
+if your title is h2, you should have your subtitle as <p class="xxx">, like this:
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle section__subtitle--about"></p>
+only use h3 for subtitle if you are going to have multiple section of h3 and underneath it got something like the
+<h3>Design + Development</h3>
+<h3>E-Commerce</h3>
+<h3>WordPress</h3> structure.
