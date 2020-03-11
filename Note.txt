@@ -29,3 +29,6 @@ only use h3 for subtitle if you are going to have multiple section of h3 and und
 <h3>Design + Development</h3>
 <h3>E-Commerce</h3>
 <h3>WordPress</h3> structure.
+
+
+do margin and padding using em, because it's related to the font size.
