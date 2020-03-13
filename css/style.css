@@ -9,7 +9,7 @@
 :root {
     /*ff stands for font-family | fw stands for font weight */
     --ff-primary: 'Source Sans Pro', sans-seriff;
-    --ff-secondary: 'Source Sans Pro', monospace;
+    --ff-secondary: 'Source Code Pro', monospace;
 
     --fw-reg: 300;
     --fw-bold: 900;
@@ -32,7 +32,7 @@
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
-        --fs-body: 1.25rem;
+        --fs-body: 1.125rem;
     }
 }
 
@@ -153,6 +153,8 @@ nav {
         grid-template-columns: min-content max-content;
     }
 
+    /* The tutorial didn't set what is title and subtitle here like they did to the .about-me section... */
+
     .intro__img {
         grid-area: img;
         min-width: 250px;
@@ -220,9 +222,58 @@ nav {
     }
 }
 
+/* About me section */
 
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
+.about-me__img {
+    box-shadow: var(--bs);
+}
 
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas:
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+
+    /*.section__title--about,*/
+    /*.section__subtitle--about {*/
+    /*    grid-column: 1;*/
+    /*}*/
+
+    .section__title--about {
+        grid-area: title;
+    }
+
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        /* 200px is the img width, 4em is padding on both sides. You will see it in chrome dev tool
+           It will make 'Designer' and 'Lorem' lining up as well */
+        padding-right: calc(200px + 4em);
+    }
+
+    .about-me__img {
+        /*grid-row: 1 / -1; !* grid-column-start / grid-column-end *!*/
+        /*grid-column: 2;*/
+
+        grid-area: img;
+        position: relative;
+        z-index: 2
+    }
+}
 
 
 
