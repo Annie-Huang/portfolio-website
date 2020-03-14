@@ -8,7 +8,7 @@
 
 :root {
     /*ff stands for font-family | fw stands for font weight */
-    --ff-primary: 'Source Sans Pro', sans-seriff;
+    --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
 
     --fw-reg: 300;
@@ -37,6 +37,10 @@
 }
 
 /* General styles */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background: var(--clr-light);
@@ -71,6 +75,7 @@ strong {
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
+    color: var(--clr-dark);
     text-decoration: none;
     cursor: pointer; /* in case you need to put it in the button instead of a link */
     font-size: .8rem;
@@ -173,6 +178,10 @@ header {
     text-decoration: none;
 }
 
+.nav__link:hover {
+    color: var(--clr-accent);
+}
+
 .nav-toggle {
     padding: .5em;
     background: transparent;
@@ -184,8 +193,24 @@ header {
     z-index: 1000; /* always have this even when the .nav is open */
 }
 
-.nav__link:hover {
-    color: var(--clr-accent);
+.nav-open .nav{
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
 }
 
 .hamburger {
@@ -196,7 +221,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -213,7 +238,6 @@ header {
 
 .hamburger::before { top: 6px }
 .hamburger::after { bottom: 6px }
-
 
 
 
