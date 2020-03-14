@@ -173,10 +173,46 @@ header {
     text-decoration: none;
 }
 
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0; /* it will not be button like */
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000; /* always have this even when the .nav is open */
+}
+
 .nav__link:hover {
     color: var(--clr-accent);
 }
 
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-dark);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: ''; /* sodu element will not display unless you give content: '' */
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 6px }
+.hamburger::after { bottom: 6px }
 
 
 
